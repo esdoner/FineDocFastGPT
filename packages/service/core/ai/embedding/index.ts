@@ -33,8 +33,8 @@ export async function getVectorsByText({ model, input, type }: GetVectorProps) {
       })
       .then(async (res) => {
         if (!res.data) {
-          addLog.error('Embedding API is not responding', res);
-          return Promise.reject('Embedding API is not responding');
+          addLog.error('Embedding API is not responding right', res);
+          return Promise.reject('Embedding API is not responding right');
         }
         if (!res?.data?.[0]?.embedding) {
           console.log(res);
